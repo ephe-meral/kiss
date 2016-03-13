@@ -191,19 +191,50 @@
     list-style: none;
 
     > li {
+        border-bottom: 1px solid $grey-color;
+        padding-bottom: 1em;
+        margin-bottom: $spacing-unit;
+    }
+    > li:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0px;
         margin-bottom: $spacing-unit;
     }
 }
 
-.post-meta {
+.post-meta p {
     font-size: $small-font-size;
     color: $grey-color;
+    display: inline;
 }
 
 .post-link {
     display: block;
     font-size: 24px;
     text-decoration: none;
+}
+
+
+
+/**
+ * Inline taglist
+ */
+.tag-list, .tag-list > li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    a {
+        font-size: $small-font-size;
+    }
+}
+
+.tag-list > li:after {
+    content: ', '
+}
+
+.tag-list > li:last-of-type:after {
+    content: ''
 }
 
 

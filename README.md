@@ -1,4 +1,4 @@
-# KISS, a simple [hugo](https://gohugo.io/) template
+# KISS, a simple [hugo](https://gohugo.io/) theme
 
 I'm using this for [my own blog](http://malumdiscordi.ae) and only implemented the few features I needed.
 Haters gonna hate and contributors gonna contribute - fork the repo, open a PR, you know the drill.

@@ -1,0 +1,12 @@
+name: kiss
+license: WTFPL
+licenselink: "https://github.com/ephe-meral/kiss/blob/master/LICENSE"
+description: "A simple theme for hugo."
+homepage: "https://github.com/ephe-meral/kiss"
+tags: ["", ""]
+features: ["", ""]
+min_version: 0.14
+
+author:
+  name: "Johanna Appel"
+  homepage: "https://github.com/ephe-meral"

@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<div class="home">
+
+  <h1 class="post-title" itemprop="name headline">Posts</h1>
+
+  <ul class="post-list">
+    {{ range first 10 .Data.Pages }}
+      <li>
+        <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <article>{{ .Summary }}</article>
+        <div class="post-meta">
+          <p>{{ .Date.Format "Jan 2, 2006" }}</p>
+          <p>• <a href="{{ .Permalink }}#disqus_thread"></a></p>
+          {{ partial "tag-list.html" . }}
+        </div>
+    {{ end }}
+  </ul>
+
+</div>
+
+{{ partial "footer.html" . }}
