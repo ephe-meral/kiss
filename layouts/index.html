@@ -1,13 +1,13 @@
+{{ partial "head.html" . }}
+
 {{ partial "header.html" . }}
 
-<div class="home">
-
+<div class="page-content wrapper home">
   <h1 class="post-title" itemprop="name headline">Posts</h1>
-
   <ul class="post-list">
-    {{ range first 10 .Data.Pages }}
+    {{ range where .Data.Pages "Section" "post" }}
       <li>
-        <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h2>
         <article>{{ .Summary }}</article>
         <div class="post-meta">
           <p>{{ .Date.Format "Jan 2, 2006" }}</p>
@@ -16,7 +16,8 @@
         </div>
     {{ end }}
   </ul>
-
 </div>
 
 {{ partial "footer.html" . }}
+
+{{ partial "foot.html" . }}

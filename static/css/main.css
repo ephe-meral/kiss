@@ -95,7 +95,7 @@ code {
   font-size: 15px;
   border: 1px solid #AB7180;
   border-radius: 3px;
-  background-color: #eef; }
+  /*background-color: #eef;*/ }
 
 code {
   padding: 1px 5px; }
@@ -107,6 +107,26 @@ pre {
     border: 0;
     padding-right: 0;
     padding-left: 0; }
+
+.highlight-caption {
+  position: relative;
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 2em;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
+  color: #474747;
+  font-weight: normal;
+  margin-bottom: 0px;
+  background-color: #CCC;
+  background-image: linear-gradient(#FFF, #F0F0F0 6%, #E5E5E5 90%, #E5E5E5);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "Helvetica Neue",Arial,"Lucida Grande","Lucida Sans Unicode",Lucida,sans-serif;
+  border: 1px solid #CBCBCB; }
+
+/* Disable background of line-numbers */
+.highlight > pre > span {
+  background: none !important; }
 
 /**
  * Wrapper
@@ -146,6 +166,12 @@ hr {
   vertical-align: middle; }
   .icon > svg path {
     fill: #AB7180; }
+
+/**
+ * MathJax
+ */
+.MathJax_Display {
+  display: inline !important; }
 
 /**
  * GitHub ribbon

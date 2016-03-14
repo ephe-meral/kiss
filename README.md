@@ -12,6 +12,20 @@ $ git clone https://github.com/ephe-meral/kiss.git ./themes/kiss
 $ hugo server -w --theme=kiss
 ```
 
+### Configuring
+
+These options can be defined in your page-global config:
+
+``` yaml
+params:
+  Description:     # add the general blog description
+  Email:           # add your personal email (footer)
+  TwitterUsername: # as it says (footer)
+  GitHubUsername:  # dito (footer)
+  Comments:        # true/false
+  DisqusShortName: # see the disqus docs
+```
+
 ### Contributing
 
 * understand that changes to this repo will occur under the provided LICENSE
