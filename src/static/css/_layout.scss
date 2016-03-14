@@ -192,7 +192,7 @@
 
     > li {
         border-bottom: 1px solid $grey-color;
-        padding-bottom: 1em;
+        padding-bottom: $spacing-unit;
         margin-bottom: $spacing-unit;
     }
     > li:last-of-type {

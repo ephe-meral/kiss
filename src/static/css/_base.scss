@@ -19,9 +19,9 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
+       -moz-font-feature-settings: "kern" 1;
+         -o-font-feature-settings: "kern" 1;
+            font-feature-settings: "kern" 1;
     font-kerning: normal;
 }
 
@@ -132,7 +132,6 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    /*background-color: #eef;*/
 }
 
 code {
@@ -195,7 +194,7 @@ pre {
 }
 
 hr {
-  color: $grey-color-light;
+    color: $grey-color-light;
 }
 
 
@@ -216,66 +215,49 @@ hr {
 /**
  * Icons
  */
-.icon {
-
-    > svg {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        vertical-align: middle;
-
-        path {
-            fill: $grey-color;
-        }
-    }
+.icon > i {
+    color: $grey-color;
 }
 
-
-/**
- * MathJax
- */
-.MathJax_Display {
-  display: inline !important;
-}
 
 
 /**
  * GitHub ribbon
  */
 .ribbon {
-  background-color: #a00;
-  overflow: hidden;
-  white-space: nowrap;
-  /* top left corner */
-  position: absolute;
-  left: -50px;
-  top: 40px;
-  /* 45 deg ccw rotation */
-  -webkit-transform: rotate(-45deg);
-     -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-       -o-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  /* shadow */
-  -webkit-box-shadow: 0 0 10px #888;
-     -moz-box-shadow: 0 0 10px #888;
-          box-shadow: 0 0 10px #888;
+    background-color: #a00;
+    overflow: hidden;
+    white-space: nowrap;
+    /* top left corner */
+    position: absolute;
+    left: -50px;
+    top: 40px;
+    /* 45 deg ccw rotation */
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    /* shadow */
+    -webkit-box-shadow: 0 0 10px #888;
+       -moz-box-shadow: 0 0 10px #888;
+            box-shadow: 0 0 10px #888;
 }
 .ribbon a {
-  border: 1px solid #faa;
-  color: #fff;
-  display: block;
-  font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin: 1px 0;
-  padding: 10px 50px;
-  text-align: center;
-  text-decoration: none;
-  /* shadow */
-  text-shadow: 0 0 5px #444;
+    border: 1px solid #faa;
+    color: #fff;
+    display: block;
+    font: bold 81.25% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 1px 0;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    /* shadow */
+    text-shadow: 0 0 5px #444;
 }
 
 @include media-query($on-laptop) {
-  .ribbon, .ribbon a {
-    display: none;
-  }
+    .ribbon, .ribbon a {
+        display: none;
+    }
 }

@@ -159,19 +159,8 @@ hr {
 /**
  * Icons
  */
-.icon > svg {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle; }
-  .icon > svg path {
-    fill: #AB7180; }
-
-/**
- * MathJax
- */
-.MathJax_Display {
-  display: inline !important; }
+.icon > i {
+  color: #AB7180; }
 
 /**
  * GitHub ribbon
@@ -349,7 +338,7 @@ hr {
   list-style: none; }
   .post-list > li {
     border-bottom: 1px solid #AB7180;
-    padding-bottom: 1em;
+    padding-bottom: 30px;
     margin-bottom: 30px; }
   .post-list > li:last-of-type {
     border-bottom: none;
