@@ -8,17 +8,10 @@
 
       <div class="trigger">
         <a class="page-link" href="{{ .Site.BaseURL }}">Posts</a>
-        {{/*
 
-        <a class="page-link" href="{{ .
-
-        {{ $allowed_pages =  "about", "tags" }}
-        {% for my_page in site.pages %}
-          {% if allowed_pages contains my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-          {% endif %}
-        {% endfor %}
-        */}}
+        {{ range where .Site.Pages "Section" "page" }}
+          <a class="page-link" href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ end }}
 
         <a class="page-link" href="{{ .Site.RSSLink }}">Subscribe</a>
 
