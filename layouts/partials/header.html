@@ -9,8 +9,14 @@
       <div class="trigger">
         <a class="page-link" href="{{ .Site.BaseURL }}">Posts</a>
 
+        {{/* Render normal pages as menu items */}}
         {{ range where .Site.Pages "Section" "page" }}
           <a class="page-link" href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ end }}
+
+        {{/* Render taxonomies explicitly */}}
+        {{ with .Site.Taxonomies.tags }}
+          <a class="page-link" href="{{ .Site.BaseURL }}/tags">Tags</a>
         {{ end }}
 
         <a class="page-link" href="{{ .Site.RSSLink }}">Subscribe</a>
