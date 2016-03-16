@@ -1,0 +1,26 @@
+{{ partial "head.html" . }}
+
+{{ partial "header.html" . }}
+
+<div class="page-content wrapper">
+  <h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
+  <ul>
+    {{ range .Data.Pages }}
+      <li class="archive-list">
+        <a class="archive-list-article-link" href='{{ .Permalink }}'>{{ .Title | markdownify }}</a>
+
+        <p class="summary">{{ .Summary }}</p>
+
+        <div class="post-meta">
+          <p>{{ .Date.Format "Jan 2, 2006" }}</p>
+          <p>• <a href="{{ .Permalink }}#disqus_thread"></a></p>
+          {{ partial "tag-list.html" . }}
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+
+{{ partial "footer.html" . }}
+
+{{ partial "foot.html" . }}

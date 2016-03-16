@@ -1,0 +1,19 @@
+{{ partial "head.html" . }}
+
+{{ partial "header.html" . }}
+
+<div class="page-content wrapper home">
+  <h2 class="post-title" itemprop="name headline">{{ .Title }}</h2>
+
+  {{ $data := .Data }}
+  <ul class="tag-list tag-list-link">
+  {{ range $key, $value := .Data.Terms.ByCount }}
+    <li><a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}">{{ $value.Name }}</a> ({{ $value.Count }})</li>
+  {{ end }}
+  </ul>
+</div>
+
+{{ partial "footer.html" . }}
+
+{{ partial "foot.html" . }}
+

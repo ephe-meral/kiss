@@ -219,7 +219,7 @@
 /**
  * Inline taglist
  */
-.tag-list, .tag-list > li {
+@mixin tag-style() {
     display: inline;
     margin: 0;
     padding: 0;
@@ -228,13 +228,14 @@
         font-size: $small-font-size;
     }
 }
+.tag-list {
+    @include tag-style();
 
-.tag-list > li:after {
-    content: ', '
-}
-
-.tag-list > li:last-of-type:after {
-    content: ''
+    > li { @include tag-style(); }
+    > li:after {
+        content: ', ';
+    }
+    > li:last-of-type:after { content: ''; }
 }
 
 
@@ -304,4 +305,10 @@
     /* Typography (30px line-height equals 25% incremental leading) */
     font-size: 23px;
     line-height: 30px;
+}
+
+
+
+.archive-list {
+    padding-bottom: 1em;
 }

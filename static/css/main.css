@@ -94,8 +94,7 @@ pre,
 code {
   font-size: 15px;
   border: 1px solid #AB7180;
-  border-radius: 3px;
-  /*background-color: #eef;*/ }
+  border-radius: 3px; }
 
 code {
   padding: 1px 5px; }
@@ -358,18 +357,22 @@ hr {
 /**
  * Inline taglist
  */
-.tag-list, .tag-list > li {
+.tag-list {
   display: inline;
   margin: 0;
   padding: 0; }
-  .tag-list a, .tag-list > li a {
+  .tag-list a {
     font-size: 14px; }
-
-.tag-list > li:after {
-  content: ", "; }
-
-.tag-list > li:last-of-type:after {
-  content: ""; }
+  .tag-list > li {
+    display: inline;
+    margin: 0;
+    padding: 0; }
+    .tag-list > li a {
+      font-size: 14px; }
+  .tag-list > li:after {
+    content: ', '; }
+  .tag-list > li:last-of-type:after {
+    content: ''; }
 
 /**
  * Posts
@@ -419,6 +422,9 @@ hr {
   /* Typography (30px line-height equals 25% incremental leading) */
   font-size: 23px;
   line-height: 30px; }
+
+.archive-list {
+  padding-bottom: 1em; }
 
 /**
  * Syntax highlighting styles
