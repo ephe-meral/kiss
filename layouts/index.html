@@ -7,7 +7,7 @@
   <ul class="post-list">
     {{ range where .Data.Pages "Section" "post" }}
       <li>
-        <h2><a class="post-link" href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></h2>
+        <h2><a class="post-link" href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
         <article>{{ .Summary }}</article>
         <div class="post-meta">
           <p>{{ .Date.Format "Jan 2, 2006" }}</p>
