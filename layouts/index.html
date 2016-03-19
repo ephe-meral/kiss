@@ -11,7 +11,7 @@
         <article>{{ .Summary }}</article>
         <div class="post-meta">
           <p>{{ .Date.Format "Jan 2, 2006" }}</p>
-          <p>• <a href="{{ .Permalink }}#disqus_thread"></a></p>
+          <p>• <a href="{{ .Permalink }}#disqus_thread" data-disqus-identifier="{{ .RelPermalink }}"></a></p>
           {{ partial "tag-list.html" . }}
         </div>
     {{ end }}
