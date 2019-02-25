@@ -10,7 +10,7 @@
         <a class="page-link" href="{{ .Site.BaseURL }}">Posts</a>
 
         {{/* Render normal pages as menu items */}}
-        {{ range where .Site.Pages "Section" "page" }}
+        {{ range where .Site.RegularPages "Section" "page" }}
           <a class="page-link" href="{{ .Permalink }}">{{ .Title }}</a>
         {{ end }}
 
